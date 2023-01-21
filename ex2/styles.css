@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+  }
+
+  h1 {
+    color: navy;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  ul {
+    font-size: 25px;
+    color: blueviolet;
+  }
+  a {
+    color: rgb(243, 63, 57);
+  }
+
+  footer {
+    color: rgb(6, 46, 46);
+  }
