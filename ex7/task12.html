@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<button class="tab1" onclick="viewTab('Tab_1', this, 'rgb(255, 0, 183)')"id="defaultOpen">Tab 1</button>
+<button class="tab2" onclick="viewTab('Tab_2', this, 'rgb(0, 128, 128)')" >Tab 2</button>
+
+<div id="Tab_1" class="tabdata">
+
+  <h3>Tab 1 Content</h3>
+  <p>You are on tab 1 now</p>
+
+</div>
+
+<div id="Tab_2" class="tabdata">
+
+  <h3>Tab 2 Content</h3>
+  <p>Now you are on  tab 2</p>
+
+</div>
+
+<style>
+
+    * {box-sizing: border-box;
+    box-shadow: 0cm;}
+
+
+    body, html {
+
+      height: 100%;
+      margin: 0;
+      background-color: green;
+      font-family: cursive;
+    }
+
+
+    .tab1 {
+      background-color: rgb(255, 0, 183);
+
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 50%;
+      height: 50%;
+    }
+
+    .tab2 {
+      background-color: rgb(0, 128, 128);
+
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 50%;
+      height: 50%;
+    }
+
+
+    .tabdata {
+
+      color: white;
+      background-color: red;
+
+      display: none;
+      padding: 100px 20px;
+      height: 100%;
+    }
+
+    #Tab_1 {background-color: rgb(255, 0, 183);}
+    #Tab_2 {background-color: rgb(0, 128, 128);}
+
+</style>
+
+<script>
+
+function viewTab (pageName,elmnt,color) {
+  var i, tabdata, tablinks;
+
+  tabdata = document.getElementsByClassName("tabdata");
+  for (i = 0; i < tabdata.length; i++) {
+    tabdata[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = " ";
+  }
+
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+document.getElementById("defaultOpen").click();
+
+</script>
+</body>
+</html>
