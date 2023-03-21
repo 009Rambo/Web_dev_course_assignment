@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar Chart</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+	<canvas id="myChart" width="400" height="300"></canvas>
+    <style>
+        canvas {
+			border: 1px solid white;
+            background-color: rgb(7, 4, 4);
+		}
+    </style>
+
+	<script>
+		var ctx = document.getElementById('myChart').getContext('2d');
+        ctx.canvas.width = 400;
+        ctx.canvas.height = 300;
+
+		var myChart = new Chart(ctx, {
+           // backgroundColor: 'orange',
+			type: 'bar',
+			data: {
+				labels: ["0", "1", "2", "3", "4", "5"],
+				datasets: [{
+					label: 'Bar Chart Example',
+					data: [8, 5, 4, 4, 3.5, 5],
+					backgroundColor: 'white',
+					borderColor: 'none',
+                    lebelsfontColor: 'white',
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+
+							beginAtZero: true,
+							stepSize: 1,
+                            fontColor: 'white'
+						}
+					}],
+                    xAxes: [{
+					ticks: {
+						fontColor: 'white'
+					}
+				}]
+				}
+			}
+		});
+	</script>
+</body>
+</html>
