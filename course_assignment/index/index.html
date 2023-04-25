@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><h1 COURSE ASSIGNMENT></h1></title>
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                
+                <a class="navbar-brand" href="">COURSE ASSIGNMENT</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="button-container">
+
+                    <button type="button" class="btn btn-primary" onclick="location.href='../index/index.html'">Index View</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='../tempeature/tempeature.html'">Temperature View</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='../wind/wind.html'">Wind View</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='../info/info.html'">Info View</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='../all/all.html'">All View</button>
+                </div>
+
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container align-self-center">
+            <h1 class="display-4" style="font-size: 32px;">Recent 30 Record</h1>
+            <p class="lead">Below is the table which shows the recent 30 records of all record from the API of leatest 500 mesurement.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+            </div>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">S.N.</th>
+                <th scope="col">Measurement Date</th>
+                <th scope="col">Measurement Time</th>
+                <th scope="col">Measurement Type</th>
+                <th scope="col">Measured Value</th>
+            </tr>
+        </thead>
+        <tbody id="data-output">
+        </tbody>
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>

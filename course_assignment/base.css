@@ -1,0 +1,33 @@
+body {
+    padding-top: 70px;
+    background: rgb(205, 228, 237);
+    border: 0cm;
+}
+
+
+
+thead {
+    position: sticky;
+    top: 50px;
+    background: rgb(145, 181, 154);
+}
+
+.jumbotron {
+    padding: unset;
+    text-align: center;
+}
+
+td {
+    text-transform: capitalize;
+}
+
+
+.dropdown {
+    margin: 0 0 -7px -12px;
+}
+
+.btn {
+    width: 180px;
+    height: 50px;
+
+}

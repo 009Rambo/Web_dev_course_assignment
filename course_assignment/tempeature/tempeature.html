@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="tempeature.css">
+
+    </script>
+
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <div class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+            </div>
+                <a class="navbar-brand" href="../index/index.html">COURSE ASSIGNMENT</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="button-container">
+
+                    <button type="button" class="btn btn-primary" onclick="location.href='../index/index.html'">Index View</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='../tempeature/tempeature.html'">Temperature View</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='../wind/wind.html'">Wind View</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='../info/info.html'">Info View</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='../all/all.html'">All View</button>
+                </div>
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="myInput" onkeyup="myFunction()"
+                            placeholder="Search by mesurement time.." title="Type in a name">
+                    </div>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container align-self-center">
+            <h1 class="display-4" style="font-size: 32px;">Temperature Record Table</h1>
+            <p class="lead">Below is the table and bar chart which shows the recent 20 rows of tempeature record. Here user can filter the record according to its measurement date.</p>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                  <th scope="col">S.N.</th>
+                        <th scope="col">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button"
+                                 id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Measurement Date
+                                </button>
+                                <div class="dropdown-content" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Now</a>
+                                  <a class="dropdown-item" href="#">24 Hours</a>
+                                  <a class="dropdown-item" href="#">48 Hours</a>
+                                  <a class="dropdown-item" href="#">72 Hours</a>
+                                  <a class="dropdown-item" href="#">1 Week</a>
+                                </div>
+                              </div>
+
+                        </th>
+                        <th scope="col">Measurement Time</th>
+                        <th scope="col">Measured Value</th>
+
+            </tr>
+        </thead>
+        <tbody id="data-output">
+        </tbody>
+    </table>
+
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+
+</html>
+<script src="tempeature.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    $('.dropdown-menu a').click(function(){
+        $('#dropdownMenuButton').text($(this).text());
+    });
+</script>
+<!--
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );-->
+</script>
